@@ -8,17 +8,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  h1 {
+}
+h1 {
     font-size: 4rem;
     margin-bottom: 2rem;
-  }
-  .links {
+}
+.links {
     display: flex;
     gap: 2rem;
     position: relative;
-  }
-  .links a, .links button {
+}
+.links a, .links button {
     text-decoration: none;
     color: #fff;
     background-color: #000;
@@ -27,11 +27,11 @@ body {
     border-radius: 8px;
     transition: background-color 0.3s;
     cursor: pointer;
-  }
-  .links a:hover, .links button:hover {
+}
+.links a:hover, .links button:hover {
     background-color: #333;
-  }
-  .tooltip {
+}
+.tooltip {
     position: absolute;
     top: -40px;
     background-color: #000;
@@ -41,7 +41,7 @@ body {
     font-size: 0.9rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  .tooltip.show {
+}
+.tooltip.show {
     opacity: 1;
-  }
+}

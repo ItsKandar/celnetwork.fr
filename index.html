@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CELNETWORK</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>CELNETWORK</h1>
+  <div class="links">
+    <a href="https://github.com/ItsKandar" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/celeste-it/" target="_blank">LinkedIn</a>
+    <button onclick="copyEmail()">Email</button>
+    <div id="tooltip" class="tooltip">Adresse mail copiée !</div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      const email = "celeste@celnetwork.fr";
+      navigator.clipboard.writeText(email).then(() => {
+        const tooltip = document.getElementById("tooltip");
+        tooltip.classList.add("show");
+        setTimeout(() => tooltip.classList.remove("show"), 2000);
+      }, (err) => {
+        const tooltip = document.getElementById("tooltip");
+        tooltip.textContent = "Erreur lors de la copie.";
+        tooltip.classList.add("show");
+        setTimeout(() => {
+          tooltip.classList.remove("show");
+          tooltip.textContent = "Adresse mail copiée !";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
